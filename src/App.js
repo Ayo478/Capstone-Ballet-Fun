@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Barre from "./pages/Barre";
 import Header from "./component/header/Header";
 import Core from "./pages/Core";
-import Workout from "./pages/workOut";
+import Workout from "./pages/Workout";
 
 function App() {
   return (

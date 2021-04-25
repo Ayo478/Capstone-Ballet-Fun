@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
+import Mainvideo from "../component/mainvideo/Mainvideo";
+import SideVideo from "../component/sideVideo/sideVideo";
 import axios from "axios";
 
 const Barre = () => {
   const [barrevideos, setBarrevideos] = useState(null);
+  const [currentvideo, setCurrentvideo] = useState(null);
+
   const fetchData = async () => {
-    const response = await axios.get("/api/barre/1");
+    const response = await axios.get("/api/barre/");
     setBarrevideos(response.data);
   };
 
@@ -13,57 +17,21 @@ const Barre = () => {
   }, []);
   //use useeffect so page loads with data
   if (!barrevideos) return null;
+  setCurrentvideo(barrevideos[0]);
   return (
     <div>
-      <iframe
-        width="560"
-        height="315"
-        src={barrevideos.first_video}
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-
-      <iframe
-        width="560"
-        height="315"
-        src={barrevideos.second_video}
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-
-      <iframe
-        width="560"
-        height="315"
-        src={barrevideos.third_video}
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-
-      <iframe
-        width="560"
-        height="315"
-        src={barrevideos.fourth_video}
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-
-      <iframe
-        width="560"
-        height="315"
-        src={barrevideos.fifth_video}
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+      <div>
+        <iframe
+          width="560"
+          height="315"
+          src={currentVideo.url}
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <SideVideo barrvidside={barrevideos} currentvidside={currentvideo} />
     </div>
   );
 };
