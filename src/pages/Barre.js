@@ -1,23 +1,28 @@
 import React, { useState, useEffect } from "react";
-import Mainvideo from "../component/mainvideo/Mainvideo";
 import SideVideo from "../component/sideVideo/sideVideo";
 import axios from "axios";
 
 const Barre = () => {
   const [barrevideos, setBarrevideos] = useState(null);
-  const [currentvideo, setCurrentvideo] = useState(null);
+  const [currentVideo, setCurrentvideo] = useState(null);
 
   const fetchData = async () => {
-    const response = await axios.get("/api/barre/");
-    setBarrevideos(response.data);
+    try {
+      const response = await axios.get("/api/barre/");
+      setBarrevideos(response.data);
+      console.log(barrevideos);
+      setCurrentvideo(response.data[0]);
+    } catch (error) {
+      console.log(error);
+    }
   };
-
   useEffect(() => {
     fetchData();
   }, []);
-  //use useeffect so page loads with data
+
   if (!barrevideos) return null;
-  setCurrentvideo(barrevideos[0]);
+  if (!currentVideo) return null;
+
   return (
     <div>
       <div>
@@ -31,7 +36,7 @@ const Barre = () => {
           allowfullscreen
         ></iframe>
       </div>
-      <SideVideo barrvidside={barrevideos} currentvidside={currentvideo} />
+      <SideVideo vidside={barrevideos} currentvidside={currentVideo} />
     </div>
   );
 };
