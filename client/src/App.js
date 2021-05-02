@@ -7,6 +7,7 @@ import Core from "./pages/Core";
 import Workout from "./pages/Workout";
 import Footer from "./component/footer/Footer";
 import FindSchools from "./component/findSchools/FindSchools";
+import AboutMe from "./pages/AboutMe";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route exact path="/core" component={Core} />
         <Route exact path="/workout" component={Workout} />
         <Route exact path="/FindSchools" component={FindSchools} />
+        <Route exact path="/barre/:id" component={Barre} />
+        <Route exact path="/AboutMe" component={AboutMe} />
       </Switch>
       <Footer />
     </Router>

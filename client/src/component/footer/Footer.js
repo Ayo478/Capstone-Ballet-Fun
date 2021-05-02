@@ -8,10 +8,14 @@ function Footer(props) {
       <nav>
         <ul className="footer__list">
           <li>
-            <Link to="/FindSchools">FindSchools</Link>
+            <Link className="link" to="/FindSchools">
+              Find Schools
+            </Link>
           </li>
           <li>
-            <Link to="/AboutMe">AboutMe</Link>
+            <Link className="link" to="/AboutMe">
+              About Me
+            </Link>
           </li>
         </ul>
       </nav>

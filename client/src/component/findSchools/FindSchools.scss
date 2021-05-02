@@ -1,0 +1,30 @@
+@import "../../partials/mixins.scss";
+
+.find {
+  background-color: $almond;
+  display: flex;
+  flex-direction: column;
+  padding-left: 590px;
+  padding-top: 2rem;
+  justify-content: space-evenly;
+  color: $chocolate;
+
+  &__input {
+    height: 1.5rem;
+    border-radius: 0.625rem;
+    margin-right: 0.5rem;
+    border: 1px soild black;
+  }
+  &__button {
+    background-color: $almond;
+    color: $chocolate;
+    margin-bottom: 0.5rem;
+    border: 1.5px solid black;
+    border-radius: 3px;
+    padding: 0 0.25rem;
+  }
+  &__res {
+    display: flex;
+    flex-direction: column;
+  }
+}

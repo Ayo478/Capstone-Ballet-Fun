@@ -1,13 +1,23 @@
 import React, { useState, useEffect } from "react";
 import SideVideo from "../component/sideVideo/sideVideo";
 import axios from "axios";
+import { useParams } from "react-router-dom";
+import "./Barre.scss";
 
 const Barre = () => {
+  let id = useParams();
   const [barrevideos, setBarrevideos] = useState(null);
   const [currentVideo, setCurrentvideo] = useState(null);
 
   const fetchData = async () => {
     try {
+      if (id) {
+        const singleResponse = await axios.get(`/api/barre/${id}`);
+        setCurrentvideo(singleResponse.data);
+        const response = await axios.get("/api/barre/");
+        setBarrevideos(response.data);
+      } else {
+      }
       const response = await axios.get("/api/barre/");
       setBarrevideos(response.data);
       console.log(barrevideos);
@@ -16,6 +26,7 @@ const Barre = () => {
       console.log(error);
     }
   };
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -25,10 +36,10 @@ const Barre = () => {
 
   return (
     <div>
-      <div>
+      <div className="barre__page">
         <iframe
-          width="560"
-          height="315"
+          width="960"
+          height="515"
           src={currentVideo.url}
           title="YouTube video player"
           frameborder="0"

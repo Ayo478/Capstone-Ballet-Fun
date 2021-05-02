@@ -1,13 +1,29 @@
+@import "../../partials/mixins.scss";
+
 * {
   margin: 0;
   padding: 0;
 }
 
 .footer {
-  background-color: lightblue;
+  background-color: $yellow;
+  height: 5rem;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    align-items: center;
+    height: 5rem;
+    text-decoration: none;
+  }
 }
 
-.footer__list {
-  display: flex;
-  justify-content: space-evenly;
+.link {
+  text-decoration: none;
+  font-size: xx-large;
+  font-family: cursive;
+  color: $burnt;
 }
