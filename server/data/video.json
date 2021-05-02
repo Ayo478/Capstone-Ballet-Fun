@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "lesson": "Barre",
+    "first_video": "https://www.youtube.com/embed/z1T4ERqtS04",
+    "second_video": "https://www.youtube.com/embed/FD6bB3Mz7q0",
+    "third_video": "https://www.youtube.com/embed/4YA5ak1wV3A",
+    "fourth_video": "https://www.youtube.com/embed/kc-ETpHnniI",
+    "fifth_video": "https://www.youtube.com/embed/NK6feUaxOgg"
+  },
+  {
+    "id": "2",
+    "lesson": "Workout",
+    "first_video": "https://www.youtube.com/embed/cC-kKj-ZQ-Y",
+    "second_video": "https://www.youtube.com/embed/A5K-ioB5O6A",
+    "third_video": "https://www.youtube.com/embed/lgAiGNKain4",
+    "fourth_video": "https://www.youtube.com/embed/ke4vk3QidG4",
+    "fifth_video": "https://www.youtube.com/embed/SHOuzEGKI1A"
+  },
+  {
+    "id": "3",
+    "lesson": "Core",
+    "first_video": "https://www.youtube.com/embed/3mRGSUIbAv4",
+    "second_video": "https://www.youtube.com/embed/a5_KVWc4b38",
+    "third_video": "https://www.youtube.com/embed/70-hvaZaXq0",
+    "fourth_video": "https://www.youtube.com/embed/euPHXhpB9s",
+    "fifth_video": "https://www.youtube.com/embed/HjIf-AWaWKg"
+  }
+]
