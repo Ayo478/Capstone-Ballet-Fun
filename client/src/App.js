@@ -4,9 +4,9 @@ import Home from "./pages/Home";
 import Barre from "./pages/Barre";
 import Header from "./component/header/Header";
 import Core from "./pages/Core";
-import Workout from "./pages/Workout";
+import Workout from "./pages/workOut";
 import Footer from "./component/footer/Footer";
-import FindSchools from "./component/findSchools/FindSchools";
+import FindSchools from "./component/findSchools/findSchools";
 import AboutMe from "./pages/AboutMe";
 
 function App() {

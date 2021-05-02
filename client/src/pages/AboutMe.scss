@@ -1,0 +1,22 @@
+@import "../partials/mixins.scss";
+* {
+  margin: 0;
+  padding: 0;
+}
+.about {
+  background-color: $almond;
+  padding-left: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 20rem;
+  font-size: xx-large;
+  &__text {
+    color: $chocolate;
+    font-family: cursive;
+  }
+  &__photo {
+    height: 50vh;
+    width: 20vw;
+    padding-left: 35rem;
+    margin-bottom: 2rem;
+  }
+}
