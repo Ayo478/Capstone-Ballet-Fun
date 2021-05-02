@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import "./FindSchools.scss";
 
 class FindSchools extends React.Component {
   constructor(props) {
@@ -20,21 +21,27 @@ class FindSchools extends React.Component {
   };
   render() {
     return (
-      <div>
-        <h1> Find a School Near You! </h1>
+      <div className="find">
+        <h1 className="find__title"> Find a School Near You </h1>
 
         <form
+          className="find__form"
           ref={(form) => (this.submitForm = form)}
           onSubmit={this.handleSubmit}
         >
           <label>ENTER CITY AND STATE </label>
-          <input name="location" type="text" />
-          <button type="submit"> ENTER </button>
+          <input className="find__input" name="location" type="text" />
+          <button className="find__button" type="submit">
+            {" "}
+            ENTER{" "}
+          </button>
         </form>
         {this.state.results &&
           this.state.results.map((school) => (
-            <div>
-              <h1>{school.name}</h1>{" "}
+            <div className="find__res">
+              <h3>{school.name}</h3>
+              {school.display_phone}
+              {school.location.display_address}
             </div>
           ))}
       </div>

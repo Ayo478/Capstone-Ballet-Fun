@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import "./Core.scss";
 import SideVideo from "../component/sideVideo/sideVideo";
 
 const Core = () => {
@@ -26,10 +26,10 @@ const Core = () => {
 
   return (
     <div>
-      <div>
+      <div className="core__page">
         <iframe
-          width="560"
-          height="315"
+          width="960"
+          height="515"
           src={currentVideo.url}
           title="YouTube video player"
           frameborder="0"

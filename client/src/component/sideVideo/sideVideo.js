@@ -1,24 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./sideVideo.scss";
 
 function SideVideo({ vidside, currentvidside }) {
   console.log(vidside);
   console.log(currentvidside);
   return (
-    <div>
+    <div className="side__video">
       {vidside
         .filter((video) => video.id !== currentvidside.id)
         .map((video) => {
           return (
-            <Link key={video.id} to={video.id} className="next__video">
+            <Link
+              key={video.id}
+              to={`/barre/${video.id}`}
+              className="next__video"
+            >
               <iframe
-                width="100"
-                height="100"
+                width="250"
+                height="150"
                 src={video.url}
                 title="YouTube video player"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                autohide="1"
+                //  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                // allowfullscreen
+                modestbranding="1"
+                sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation"
               ></iframe>
             </Link>
           );

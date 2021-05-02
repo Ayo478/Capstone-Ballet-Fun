@@ -1,0 +1,28 @@
+@import "../partials/partials.scss";
+@import "../partials/mixins.scss";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.ballet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $almond;
+  &__text {
+    text-align: center;
+    font-family: cursive;
+    color: $chocolate;
+  }
+}
+
+.ballet__dancer {
+  height: 800px;
+  width: 40%;
+
+  &--two {
+    height: 800px;
+    width: 40%;
+  }
+}

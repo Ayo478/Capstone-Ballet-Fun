@@ -1,0 +1,9 @@
+@import "../../partials/mixins.scss";
+
+.side__video {
+  display: flex;
+  background-color: $almond;
+  padding-left: 7%;
+  padding-top: 6.6rem;
+  justify-content: space-around;
+}
