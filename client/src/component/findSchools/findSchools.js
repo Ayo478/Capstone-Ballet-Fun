@@ -25,11 +25,10 @@ class FindSchools extends React.Component {
         <h1 className="find__title"> Find a School Near You </h1>
 
         <form
-          className="find__form"
           ref={(form) => (this.submitForm = form)}
           onSubmit={this.handleSubmit}
         >
-          <label>ENTER CITY AND STATE </label>
+          <label className="find__title">ENTER CITY AND STATE </label>
           <input className="find__input" name="location" type="text" />
           <button className="find__button" type="submit">
             {" "}
