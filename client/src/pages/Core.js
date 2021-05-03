@@ -28,8 +28,8 @@ const Core = () => {
     <div>
       <div className="core__page">
         <iframe
-          width="960"
-          height="515"
+          width="760"
+          height="315"
           src={currentVideo.url}
           title="YouTube video player"
           frameborder="0"
